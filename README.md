@@ -48,11 +48,13 @@ async function fetchOverpass(query) {
 
 ## 🎙️ Wadia: an AI voice assistant that runs on my laptop
 
+**[Read the code](https://github.com/AleexWadee/Wadia)**
+
 Python voice assistant with speech recognition, a local language model (Qwen via Ollama) and speech synthesis, all running on my own laptop with no cloud services. It replies about two seconds after you stop talking, remembers past conversations, and has a guest mode that hides private data.
 
 I first wanted to train my own model, but my laptop didn't have enough memory, so I switched to running local models and giving them web and file access instead.
 
-*Code coming to GitHub soon.*
+Highlights: it speaks the answer sentence by sentence while the model is still writing it ([`brain.py`](https://github.com/AleexWadee/Wadia/blob/main/local/brain.py)), the model decides by itself when to use tools like web search, weather or a safe calculator ([`tools.py`](https://github.com/AleexWadee/Wadia/blob/main/local/tools.py)), and a phone app and guest mode run on the same `aiohttp` backend ([`server.py`](https://github.com/AleexWadee/Wadia/blob/main/local/server.py)).
 
 ---
 
